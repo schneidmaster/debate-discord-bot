@@ -1,0 +1,29 @@
+{
+  "name": "debate-discord-bot",
+  "version": "0.1.0",
+  "description": "Discord bot to greet attendees and add them to tournament servers",
+  "main": "app.ts",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schneidmaster/debate-discord-bot.git"
+  },
+  "author": "Zach Schneider <zach@schneider.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schneidmaster/debate-discord-bot/issues"
+  },
+  "homepage": "https://github.com/schneidmaster/debate-discord-bot#readme",
+  "dependencies": {
+    "@types/node": "^14.14.31",
+    "@types/node-fetch": "^2.5.8",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
