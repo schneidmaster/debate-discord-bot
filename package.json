@@ -10,10 +10,9 @@
   },
   "author": "Zach Schneider <zach@schneider.dev>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/schneidmaster/debate-discord-bot/issues"
+  "scripts": {
+    "start": "ts-node app.ts"
   },
-  "homepage": "https://github.com/schneidmaster/debate-discord-bot#readme",
   "dependencies": {
     "@types/node": "^14.14.31",
     "@types/node-fetch": "^2.5.8",
@@ -25,5 +24,9 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/schneidmaster/debate-discord-bot/issues"
+  },
+  "homepage": "https://github.com/schneidmaster/debate-discord-bot#readme"
 }
