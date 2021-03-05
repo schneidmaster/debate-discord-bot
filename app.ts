@@ -112,7 +112,9 @@ client.on("guildMemberAdd", async (member) => {
 
   const channel = await member.createDM();
 
-  await channel.send(`Welcome to the ${TOURNAMENT_NAME} tournament hub!`);
+  await channel.send(
+    `Welcome to the ${TOURNAMENT_NAME} tournament hub! Let's get you set up.`
+  );
 
   const nickname = await getReply(
     channel,
