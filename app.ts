@@ -102,7 +102,9 @@ client.on("ready", () => {
 
 // Create an event listener for new guild members.
 client.on("guildMemberAdd", async (member) => {
+  console.log(`New member joined: ${member.user.username}`);
   if (member.guild.id !== mainGuild.id) {
+    console.log("Returning because this is not the hub server");
     return;
   }
 
@@ -207,6 +209,7 @@ const addUserToServers = async (code: string) => {
         accessToken: token,
         roles: [otherGuildMatchingRole],
       });
+      console.log(`Added user to ${otherGuild.name} with role ${roleName}`);
     } else {
       console.log(
         `Could not find matching role with name '${roleName}' in ${otherGuild.name}`
