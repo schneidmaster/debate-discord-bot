@@ -53,7 +53,7 @@ const getReply = async (
   promptMessage += prompt;
   if (options) {
     optionsList = options.map((option) => `'${option}'`).join(", ");
-    promptMessage += `  Please reply with one of ${optionsList}.`;
+    promptMessage += ` Please reply with one of ${optionsList}.`;
   }
   await channel.send(promptMessage);
 
