@@ -33,6 +33,8 @@ if (
   );
 }
 
+const ROLES = TOURNAMENT_ROLES.split(",");
+
 //
 // Discord bot.
 //
@@ -126,7 +128,7 @@ client.on("guildMemberAdd", async (member) => {
     channel,
     member.id,
     "What is your role at the tournament?",
-    TOURNAMENT_ROLES.split(",")
+    ROLES
   );
   const role = member.guild.roles.cache.find((role) => role.name === roleName);
   if (!role) {
@@ -189,7 +191,7 @@ const addUserToServers = async (code: string) => {
   }
 
   // Fetch the role that the bot automatically granted.
-  const role = mainMember.roles.cache.first();
+  const role = mainMember.roles.cache.find((role) => ROLES.includes(role.name));
   if (!role) {
     console.log(
       "User in main guild has no roles; this should not happen as the bot should have previously granted the role"
