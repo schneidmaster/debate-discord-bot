@@ -121,7 +121,7 @@ client.on("guildMemberAdd", async (member) => {
     member.id,
     "What is your name? (Please use something that members of the community can recognize you by.)"
   );
-  member.setNickname(nickname);
+  await member.setNickname(nickname);
 
   await channel.send(
     `Thanks ${nickname}! I've set your nickname in the server for you.`
@@ -137,7 +137,7 @@ client.on("guildMemberAdd", async (member) => {
     console.log(`Could not find role ${roleName} on hub`);
     return;
   }
-  member.roles.add(role);
+  await member.roles.add(role);
 
   await channel.send(
     "Thanks! You now have access to the rest of the tournament hub. I am about to automatically add you to the other tournament servers -- please click the following link and grant me permission to add you to servers when prompted."
